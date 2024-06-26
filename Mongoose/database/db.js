@@ -19,16 +19,24 @@ const client = new MongoClient(dbURL, {
   }
 });
 
-async function run() {
-  try {
-   const database = client.db(process.env.DB_NAME);
-   const products = database.collection("products");
-   const res = await products.insertOne({
-    name:"BIO",
-   });
-   console.log("------DB Connected------")
-}catch {
-    console.log("------Err------")   
-}
-}
-run();
+// async function run() {
+//   try {
+//    const database = client.db(process.env.DB_NAME);
+//    const products = database.collection("products");
+//    const res = await products.insertOne({
+//     name:"BIO",
+//    });
+//    console.log("------DB Connected------")
+// }catch {
+//     console.log("------Err------")   
+// }
+// }
+// run();
+
+const database = client.db(process.env.DB_NAME);
+const productsCollection = database.collection("products");
+
+module.exports = {
+    database,
+    productsCollection,
+};
