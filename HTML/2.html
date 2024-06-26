@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="./contact.html" method="get">
+        <label><b>Username:</b></label><br/>
+        <input type="text" placeholder="Please Enter The Name" name="username"><br/><br/>
+        <label><b>Age:</b></label><br/>
+        <input type="number" placeholder="Please Enter The Age" name="age"><br/><br/>
+
+        <label><b>Gender:</b></label>
+        <input type="radio" id="male" name="gender" value="male" >
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" >
+        <label for="female">Female</label><br/><br/>
+
+        <label><b>Hobbies:</b></label>
+        <input type="checkbox" id="play" name="hobby" value="playing" >
+        <label for="play">Playing</label>
+
+        <input type="checkbox" id="paint" name="hobby" value="painting" >
+        <label for="paint">Painting</label><br/><br/>
+
+        <label>Description</label>
+        <textarea name="description" rows="5"></textarea><br/><br/>
+
+        <select name="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Vizag">Vizag</option>
+        </select><br/><br/>
+
+        <input type="submit" value="Done">
+        <input type="reset"><br/><br/>
+        
+        <button type="submit">Done</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

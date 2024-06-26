@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        body {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            font-family: sans-serif;
+ 
+        }
+        .container {
+            width: 450px;
+            margin-bottom: 80px;
+            margin-top: 80px;
+            overflow: hidden;
+        
+        }
+        .container form{
+            padding: 60px 20px ;
+            background: white;
+            border-radius: 15px;
+            
+             
+        }
+        .container form h2{
+            text-align: center;
+            margin-bottom: 24px;
+
+        }
+        .container form .form-control {
+            display: block;
+            width: 90%;
+            height: 40px;
+            margin: 10px 0 18px 0;
+            padding: 0 10px ;
+            border-radius: 4px;
+            border-style: solid;
+            border-color: #E7EAEE;
+        }
+        .form-group {
+            padding: 0px 0px 0px 45px;
+            color: rgb(109, 109, 109);
+        }
+        ::placeholder{
+            color: black;
+        }
+        input[type=text], input[type=email], input[type=password], input[type=tel]{
+            background-color: #E7EAEE;
+        }
+        .form-group1{
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .form-group3{
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .btn-btn-primary {
+            padding: 10px 113px ;
+            position: relative;
+            left: 8px;
+            border-radius: 20px;
+            border-style: solid;
+            color: white;
+            border-color: #10B981;
+            background-color: #10B981;
+            font-weight: 550;
+        }
+        .btn-btn-primary1 {
+            padding: 10px 60px ;
+            position: relative;
+            left: 8px;
+            border-radius: 20px;
+            border-style: solid;
+            color: white;
+            border-color: #191D23;
+            background-color: #191D23;
+            font-weight: 550;
+        }
+     
+        .form-group2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .item {
+            color: #64748B;
+            padding-left: 14px;
+            font-size: small;
+        }
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        a {
+            color:#10B981 ;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .img {
+            height:15px;
+            width: 15px; 
+            vertical-align: middle;  
+        }
+        .btn-btn-primary1 img {
+            margin-right: 12px; 
+        }
+
+        .password-inputs img {
+            position:fixed;
+            right: 39%;
+            top: 45%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            height: 28px;
+            width: 28px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form action="" class="field">
+            <h2>Create an Account</h2>
+            <div class="form-group">
+                <label for="">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control" placeholder="user123@gmail.com" required>
+            </div>
+            <div class="form-group">
+               <div class="password-inputs">
+                <label for="">Password</label>
+                <input type="password" class="form-control" placeholder="***********" required>
+                <img src="hide.png" alt="img1" >
+               </div>
+            </div>
+            <div class="form-group">
+                <label for="">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="Enter Your Mobile Number" required>
+            </div>
+            <div class="form-group1">
+                <button type="Sign Up" class="btn-btn-primary">Sign Up</button>
+            </div>
+            <div class="form-group2">
+                <div class="item">
+                    OR
+                </div>
+            </div>
+            <div class="form-group3">
+                    <button type="Sign Up" class="btn-btn-primary1"><img src="search.png" alt="img" class="img">Sign Up with google</button>  
+            </div>
+            <div class="bottom">
+                <p class="text">Already have an Account? <a href="">Login</a></p>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation & Search</title>
+    <style>
+ /* Root container for the product cards */
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+  display: block;
+  margin: 0 auto;
+  /* Adjust the width as needed */
+  width: 20%;
+  padding: 10px;
+}
+
+
+/* Individual product card */
+.product-card {
+    background: #aedadd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title of the product */
+.product-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Price of the product */
+.product-card p:nth-child(2) {
+    font-size: 1.2em;
+    color: #27ae60;
+    margin: 10px 0;
+}
+
+/* Description of the product */
+.product-card p:nth-child(3) {
+    font-size: 1em;
+    color: #383838;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+/* Thumbnail image */
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    #root {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation & Search</h1>
+    <input type="text" id="searchInput" placeholder="Search items">
+    <div id="root"></div>
+
+    <script>
+        const root = document.getElementById('root');
+        const searchInput = document.getElementById('searchInput');
+
+        const request = fetch('https://dummyjson.com/products');
+
+        request.then((result) => {
+            const convertData = result.json();
+            convertData.then(data => {
+                renderUI(data.products);
+                searchInput.addEventListener('input', () => filterProducts(data.products));
+            });
+        }).catch((error) => {
+            alert(error);
+        });
+
+        const renderUI = (products) => {
+            root.innerHTML = '';
+            for (let i = 0; i < products.length; i++) {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${products[i].thumbnail}" alt="${products[i].title}" />
+                    <h3>${products[i].title}</h3>
+                    <p>Price: $${products[i].price}</p>
+                    <p>Description: ${products[i].description}</p>
+                `;
+                root.appendChild(card);
+            }
+        }
+
+        const filterProducts = (products) => {
+            const query = searchInput.value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.title.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query)
+            );
+            renderUI(filteredProducts);
+        }
+    </script>
+</body>
+</html>

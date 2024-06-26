@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Form</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <form id="userForm">
+            <h2>User Information</h2>
+            <div id="error" class="error"></div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="userCard" class="user-card" style="display: none;">
+            <h2>User Card</h2>
+            <p><strong>Name:</strong> <span id="cardName"></span></p>
+            <p><strong>Email:</strong> <span id="cardEmail"></span></p>
+            <p><strong>Age:</strong> <span id="cardAge"></span></p>
+        </div>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>

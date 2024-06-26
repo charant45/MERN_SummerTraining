@@ -1,0 +1,59 @@
+/* h4 {
+    color:blue;
+}
+
+.html-grp.h1 {
+    font-style: italic;
+    font-size: larger;
+}
+
+.html-grp.heading2{
+    font-size: 32px;
+} */
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: aquamarine;
+    font-size: 10px;
+
+}
+
+p {
+    background-color:blanchedalmond;
+    font-size: 4em;
+    width:10em;
+} */
+
+/* div {
+    background-color: aqua;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+} */
+
+.btn {
+    display: block;
+    background-color: rgb(20, 207, 67);
+    color:  rgb(236, 236, 241);
+    width: fit-content;
+    margin: 10px auto;
+    text-align: center;
+    font-size:16px;
+    padding:6px 18px;
+    border-radius: 0.5em;
+    border:none;
+}
+
+.big {
+    font-size: 24px;
+}
+
+.small {
+    font-size: 12px;
+}

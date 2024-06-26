@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./form.css">
+    <style>
+        body {
+            padding: 3px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body> 
+    <!-- <form onchange="handleSubmitted(event)">
+        <div class="container">
+            <input onchange="handleUserName(event)" type="text" name="userName" placeholder="Enter Name" ><br/><br/>
+            <input onchange="handleUserAge(event)" type="number" name="userage" placeholder="Enter Age" ><br/><br/>
+            <button type="submit">Submit Details</button>
+        </div>
+    </form> -->
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <button>Submit</button>
+    </form>
+
+    <div id="root"> 
+
+    </div>
+    <script src="./form.js"></script>
+</body>
+</html>
