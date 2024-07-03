@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 40px;
+    width: 80px;
+}
+
+.homepage-root-container{
+    /* background-color: yellow; */
+}
+
+.homepage-nav{
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #141920;
+    color: #fff;
+    font-size: larger;
+}
+
+.homepage-nav>h4{
+    width: 76px;
+}
+.homepage-nav>p{
+    width: 100px;
+    font-size: 14px;
+
+}
+.homepage-search-container{
+    flex-grow: 1;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    input{
+        flex-grow: 1;
+    }
+
+}
+.btn {
+    width: 30px;
+    background-color: orange;
+}
+
+.category-bar {
+    background-color: #252F3D;
+    padding: 25px 16px;
+    height: 40px ;
+    display: flex;
+    align-items: center;
+
+    button {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 4px 8px;
+        font-size: 16px;
+
+    }
+}
+
+.category-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    font-size: large;
+}
+
+.homepage-image{
+    width: 100vw;
+}
+
+.homepage-category-bar>.category-items{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+    padding: 0 12px;
+}
+
+.homepage-body>.carousal-image{
+  width: 100%;
+}
+
+.homepage-body>.products-cards-container{
+  background-color: aqua;
+  margin: 0 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
