@@ -115,11 +115,11 @@ const categories = [
 const App = () => {
     return (
         <div>
-            {/* <HomePage 
+            <HomePage 
                 productInfoCards={productInfoCards} 
                 categories={categories}
-            /> */}
-            <SearchPage categories={categories} />
+            />
+            {/* <SearchPage categories={categories} /> */}
         </div>
     );
 };

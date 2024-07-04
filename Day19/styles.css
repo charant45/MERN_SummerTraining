@@ -46,7 +46,7 @@
     background-color: orange;
 }
 
-.category-bar {
+.homepage-category-bar {
     background-color: #252F3D;
     padding: 25px 16px;
     height: 40px ;
@@ -76,6 +76,12 @@
     font-size: large;
 }
 
+.category-items1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 300px;
+}
 
 
 .homepage-category-bar>.category-items{
@@ -89,13 +95,12 @@
 
 
 .carousal-image,
-.carousal-image1 {
+.carousal-image1{
     display: block;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-
 
 
 .homepage-body>.products-cards-container{
@@ -136,4 +141,11 @@
             }
         }
     }
+}
+
+.carousal-video {
+    width: 100%;
+    position: absolute;
+    top: 920px;
+    background-color: #EAEDED;
 }
