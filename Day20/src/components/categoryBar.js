@@ -1,7 +1,8 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 
+
 const CategoryBar = (props) => {
-    const { categories } = props;
+    const { categories=[] } = props;
     return (
         <div className="homepage-category-bar">
             <button>
@@ -16,5 +17,6 @@ const CategoryBar = (props) => {
         </div>
     );
 };
+
 
 export default CategoryBar;
