@@ -1,7 +1,7 @@
 import Navbar from "../components/navbar";
 import CategoryBar from "../components/categoryBar";
 import Footer from "../components/footer";
-import '../../productInfo.css';
+import '../../productinf.css';
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
