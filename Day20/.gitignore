@@ -3,4 +3,4 @@ nature.mp4
 node_modules
 .env
 dist
-.label/parcel
+.parcel-cache
