@@ -6,7 +6,6 @@ import ProductInfo from "./src/pages/productinfo";
 import { useState } from "react";
 import {
     createBrowserRouter,
-    Route,
     RouterProvider,
   } from "react-router-dom";
 
